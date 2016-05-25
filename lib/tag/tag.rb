@@ -8,7 +8,7 @@ module SizeTagging
     end
 
     def product_size_option
-      size_opt = @product.options.select { |opt| opt.name == 'Size' }
+      size_opt = @product.options.select { |opt| opt.name.downcase == 'size' }
       if size_opt.any?
         "option#{size_opt.first.position}"
       end
