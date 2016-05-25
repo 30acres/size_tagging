@@ -19,7 +19,7 @@ module SizeTagging
     end
 
     def self.limit
-      50
+      250
     end
 
     def self.count
