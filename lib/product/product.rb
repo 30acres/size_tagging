@@ -4,7 +4,7 @@ module SizeTagging
       p_arr = []
       find_params = { limit: limit }.merge(params)
       pages.times do |p|
-        p_arr << ShopifyAPI::Product.find(:all, params: find_params.merge({ page: p}) ) 
+        p_arr << ShopifyAPI::Product.find(:all, params: find_params.merge({ page: p}) )
       end
       p_arr
     end
@@ -15,7 +15,7 @@ module SizeTagging
     end
 
     def self.pages
-      count/limit
+      count/limit + 1
     end
 
     def self.limit
